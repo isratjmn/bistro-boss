@@ -1,12 +1,13 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
 	const navOptions =  
     <>
         <li>
-            <a className="text-black md:text-white font-semibold text-lg">Home</a>
+            <Link to= '/' className="text-black lg:text-white font-semibold text-lg">Home</Link>
         </li>
-        <li tabIndex={0}>
+        {/* <li tabIndex={0}>
             <a className="justify-between text-black md:text-white font-semibold text-lg">
                 Contact Us
                 <svg
@@ -27,12 +28,12 @@ const NavBar = () => {
                     <a>Submenu 2</a>
                 </li>
             </ul>
+        </li> */}
+        <li>
+            <Link to= '/menu' className="text-black lg:text-white font-semibold text-lg">Our Menu</Link>
         </li>
         <li>
-            <a className="text-black md:text-white font-semibold text-lg">Our Menu</a>
-        </li>
-        <li>
-            <a className="text-black md:text-white font-semibold text-lg">Dashboard</a>
+            <a className="text-black lg:text-white font-semibold text-lg">Dashboard</a>
         </li>
     </>
 	

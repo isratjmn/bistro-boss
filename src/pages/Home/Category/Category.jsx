@@ -14,51 +14,63 @@ const Category = () => {
 	return (
 		<section className="my-20">
 			<SectionTitle
-				subHeading={"From 11:00am to 10:00pm"}
-				heading={" Order Online "}
-			></SectionTitle>
+				subHeading="From 11:00am to 10:00pm"
+				heading="Order Online"
+			/>
+
 			<Swiper
-				slidesPerView={5}
-				spaceBetween={20}
-				pagination={{
-					clickable: true,
+				slidesPerView={2}
+				spaceBetween={10}
+				pagination={{ clickable: true }}
+				className="mySwiper mb-20"
+				breakpoints={{
+					640: {
+						slidesPerView: 2,
+						spaceBetween: 20,
+					},
+					768: {
+						slidesPerView: 3,
+						spaceBetween: 30,
+					},
+					1024: {
+						slidesPerView: 4,
+						spaceBetween: 40,
+					},
 				}}
-				modules={[Pagination]}
-				className="mySwiper mb-24"
 			>
 				<SwiperSlide>
-					<img src={slider1} alt="" />
-					<h3 className="text-4xl uppercase text-white -mt-16 ps-20">
+					<img src={slider1} alt="img1" />
+					<h3 className="text-4xl uppercase text-white -mt-16 ps-4 md:ps-20">
 						Salad
 					</h3>
 				</SwiperSlide>
 				<SwiperSlide>
-					<img src={slider2} alt="" />
-					<h3 className="text-4xl uppercase text-white -mt-16 ps-20">
+					<img src={slider2} alt="img2" />
+					<h3 className="text-4xl uppercase text-white -mt-16 ps-4 md:ps-20">
 						Soups
 					</h3>
 				</SwiperSlide>
 				<SwiperSlide>
-					<img src={slider3} alt="" />
-					<h3 className="text-4xl uppercase text-white -mt-16 ps-20">
-						pizzas
+					<img src={slider3} alt="img3" />
+					<h3 className="text-4xl uppercase text-white -mt-16 ps-4 md:ps-20">
+						Pizzas
 					</h3>
 				</SwiperSlide>
 				<SwiperSlide>
-					<img src={slider4} alt="" />
-					<h3 className="text-4xl uppercase text-white -mt-16 ps-20">
-						desserts
+					<img src={slider4} alt="img1" />
+					<h3 className="text-4xl uppercase text-white -mt-16 ps-4 md:ps-20">
+						Desserts
 					</h3>
 				</SwiperSlide>
 				<SwiperSlide>
-					<img src={slider5} alt="" />
-					<h3 className="text-4xl uppercase text-white -mt-16 ps-20">
+					<img src={slider5} alt="img4" />
+					<h3 className="text-4xl uppercase text-white -mt-16 ps-4 md:ps-20">
 						Soups
 					</h3>
 				</SwiperSlide>
 				<SwiperSlide>
-					<img src={slider3} alt="" />
-					<h3 className="text-4xl uppercase text-white -mt-16 ps-20">
+					<img src={slider3} alt="img5" />
+					<h3 className="text-4xl uppercase text-white -mt-16 ps-4 md:ps-20">
 						Salad
 					</h3>
 				</SwiperSlide>
