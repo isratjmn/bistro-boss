@@ -42,7 +42,7 @@ const Featureed = () => {
 						</p>
 						<button className="px-6 py-3 rounded-md btn btn-outline border-0
                         border-b-4 mt-4">
-							Order Now
+							ORDER NOW
 						</button>
 					</div>
 				</div>
