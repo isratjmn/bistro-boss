@@ -52,7 +52,7 @@ const AuthProvider = ({ children }) => {
 			setUser(currentUser);
 			console.log("Current User", currentUser);
 
-			// get & Set Token
+			//! get & Set Token
 			if (currentUser) {
 				axios
 					.post("http://localhost:7000/jwt", {
@@ -61,12 +61,13 @@ const AuthProvider = ({ children }) => {
 					.then((data) => {
 						console.log(data.data.token);
 						localStorage.setItem("access-token", data.data.token);
+						setLoading(false);
 					});
 			}
 			else {
 				localStorage.removeItem("access-token");
 			}
-			setLoading(false);
+			
 		});
 		return () => {
 			return unsubscribe();

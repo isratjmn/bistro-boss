@@ -13,12 +13,15 @@ import {
 import { BiBookBookmark } from "react-icons/bi";
 import useCart from "../hooks/useCart";
 import { FaUtensils } from "react-icons/fa";
+import useAdmin from "../hooks/useAdmin";
 
 const Dashboard = () => {
 	const [cart] = useCart();
 
 	//! TODO:
-	const isAdmin = true;
+	// const isAdmin = true;
+	const [isAdmin] = useAdmin();
+	
 	return (
 		<div>
 			<div className="drawer drawer-mobile">
@@ -71,11 +74,10 @@ const Dashboard = () => {
 								</li>
 								<li>
 									<NavLink to="/dashboard/allusers">
-										<HiUserGroup className="text-xl" />{" "}
-										All Users
+										<HiUserGroup className="text-xl" /> All
+										Users
 									</NavLink>
 								</li>
-
 
 								{/* <li>
 									<NavLink to="/dashboard/mycart">
