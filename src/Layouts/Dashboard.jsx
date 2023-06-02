@@ -12,7 +12,7 @@ import {
 } from "react-icons/hi2";
 import { BiBookBookmark } from "react-icons/bi";
 import useCart from "../hooks/useCart";
-import { FaUtensils } from "react-icons/fa";
+import { FaCalendarAlt, FaUtensils, FaWallet } from "react-icons/fa";
 import useAdmin from "../hooks/useAdmin";
 
 const Dashboard = () => {
@@ -21,7 +21,7 @@ const Dashboard = () => {
 	//! TODO:
 	// const isAdmin = true;
 	const [isAdmin] = useAdmin();
-	
+
 	return (
 		<div>
 			<div className="drawer drawer-mobile">
@@ -54,9 +54,9 @@ const Dashboard = () => {
 									</NavLink>
 								</li>
 								<li>
-									<NavLink to="/dashboard/reservetions">
+									<NavLink to="/dashboard/additem">
 										<FaUtensils className="text-xl" /> Add
-										Items
+										Item
 									</NavLink>
 								</li>
 
@@ -78,8 +78,27 @@ const Dashboard = () => {
 										Users
 									</NavLink>
 								</li>
-
-								{/* <li>
+							</>
+						) : (
+							<>
+								<li>
+									<NavLink to="/dashboard/home">
+										<HiHome className="text-xl" />
+										User Home
+									</NavLink>
+								</li>
+								<li>
+									<NavLink to="/dashboard/reservations">
+										<FaCalendarAlt></FaCalendarAlt>{" "}
+										Reservations
+									</NavLink>
+								</li>
+								<li>
+									<NavLink to="/dashboard/history">
+										<FaWallet></FaWallet> Payment History
+									</NavLink>
+								</li>
+								<li>
 									<NavLink to="/dashboard/mycart">
 										<HiOutlineShoppingCart className="text-xl" />{" "}
 										My Cart{" "}
@@ -87,13 +106,16 @@ const Dashboard = () => {
 											+{cart?.length || 0}
 										</span>
 									</NavLink>
-								</li> */}
+								</li>
 							</>
-						) : (
-							<></>
 						)}
 
 						<div className="divider text-gray-950"></div>
+						<li>
+							<NavLink to="/">
+								<HiHome className="text-xl" /> Home
+							</NavLink>
+						</li>
 						<li>
 							<NavLink to="/menu">
 								<HiBars3CenterLeft className="text-xl" /> Our
@@ -103,11 +125,6 @@ const Dashboard = () => {
 						<li>
 							<NavLink to="/order/salad">
 								<HiShoppingBag className="text-xl" /> Order Food
-							</NavLink>
-						</li>
-						<li>
-							<NavLink>
-								<HiEnvelope className="text-xl" /> Contact
 							</NavLink>
 						</li>
 					</ul>
